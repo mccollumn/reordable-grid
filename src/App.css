@@ -1,0 +1,102 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+  background: var(--page-background);
+  border: 1px solid var(--spectrum-global-color-gray-400);
+  max-width: 400px;
+  min-width: 200px;
+  max-height: 250px;
+  overflow: auto;
+}
+
+.list li {
+  padding: 8px;
+  outline: none;
+  cursor: default;
+}
+
+.list li:nth-child(2n) {
+  background: var(--spectrum-alias-highlight-hover);
+}
+
+.list li.pressed {
+  background: var(--spectrum-global-color-gray-200);
+}
+
+.list li[aria-selected="true"] {
+  background: slateblue;
+  color: white;
+}
+
+.list li.focus-visible {
+  outline: 2px solid slateblue;
+  outline-offset: -3px;
+}
+
+.list li.focus-visible[aria-selected="true"] {
+  outline-color: white;
+}
+
+.list li[aria-disabled] {
+  opacity: 0.4;
+}
+
+.list [role="gridcell"] {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.list li button {
+  margin-left: auto;
+}
+
+/* iOS Safari has a bug that prevents accent-color: white from working. */
+@supports not (-webkit-touch-callout: none) {
+  .list li input[type="checkbox"] {
+    accent-color: white;
+  }
+}
